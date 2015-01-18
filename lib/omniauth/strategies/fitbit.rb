@@ -22,6 +22,7 @@ module OmniAuth
         {
             :name         => raw_info['user']['displayName'],
             :full_name    => raw_info['user']['fullName'],
+            :email        => raw_info['user']['email'],
             :display_name => raw_info['user']['displayName'],
             :nickname     => raw_info['user']['nickname'],
             :gender       => raw_info['user']['gender'],
