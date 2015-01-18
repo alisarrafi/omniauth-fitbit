@@ -20,20 +20,20 @@ module OmniAuth
 
       info do
         {
-            :name         => raw_info['user']['displayName'],
-            :full_name    => raw_info['user']['fullName'],
-            :email        => raw_info['user']['email'],
-            :display_name => raw_info['user']['displayName'],
-            :nickname     => raw_info['user']['nickname'],
-            :gender       => raw_info['user']['gender'],
-            :about_me     => raw_info['user']['aboutMe'],
-            :city         => raw_info['user']['city'],
-            :state        => raw_info['user']['state'],
-            :country      => raw_info['user']['country'],
-            :dob          => !raw_info['user']['dateOfBirth'].empty? ? Date.strptime(raw_info['user']['dateOfBirth'], '%Y-%m-%d'):nil,
+            :name         => raw_info['displayName'],
+            :full_name    => raw_info['fullName'],
+            :email        => raw_info['email'],
+            :display_name => raw_info['displayName'],
+            :nickname     => raw_info['nickname'],
+            :gender       => raw_info['gender'],
+            :about_me     => raw_info['aboutMe'],
+            :city         => raw_info['city'],
+            :state        => raw_info['state'],
+            :country      => raw_info['country'],
+            :dob          => !raw_info['dateOfBirth'].empty? ? Date.strptime(raw_info['dateOfBirth'], '%Y-%m-%d'):nil,
             :member_since => Date.strptime(raw_info['user']['memberSince'], '%Y-%m-%d'),
-            :locale       => raw_info['user']['locale'],
-            :timezone     => raw_info['user']['timezone']
+            :locale       => raw_info['locale'],
+            :timezone     => raw_info['timezone']
         }
       end
 
